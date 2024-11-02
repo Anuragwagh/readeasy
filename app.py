@@ -30,7 +30,7 @@ def home():
     return render_template_string("""
     <html>
         <head>
-            <title>ReadEasy/title>
+            <title>ReadEasy</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -67,7 +67,7 @@ def home():
             </style>
         </head>
         <body>
-            <h1>Welcome to Readeasy</h1>
+            <h1>Welcome to ReadEasy</h1>
             <p>Enter a URL to get a simplified text version of the content:</p>
             <form action="/readeasy" method="get">
                 <input type="text" name="url" placeholder="Enter URL here" required>
@@ -95,14 +95,16 @@ def readeasy_url(url):
         return render_template_string(f"""
         <html>
             <head>
-                <title>Readeasy Output</title>
+                <title>ReadEasy Output</title>
                 <style>
                     body {{
-                        font-family: Arial, sans-serif;
-                        font-size: 16px;
-                        line-height: 1.6;
-                        color: #333;
-                        margin: 20px;
+                        font-family: matcherate;
+                        font-size: 14px;
+                        line-height: 1.2;
+                        color: white;
+                        background-color: black;
+                        margin: 13px;
+                        width: 32rem;
                     }}
                     .content {{
                         white-space: pre-wrap;
@@ -119,4 +121,3 @@ def readeasy_url(url):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
